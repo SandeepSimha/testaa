@@ -10,11 +10,12 @@ import androidx.appcompat.widget.Toolbar;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
-import com.sancheru.additionlib.AdditionModel;
+import com.sancheru.lib12.LibInterface;
+import com.sancheru.lib12.MultipleyModel;
 import com.sancheru.twolib.SubtractModel;
 
 public class MainActivity extends AppCompatActivity {
-    private AdditionModel additionModel;
+    private LibInterface libInterface;
     private SubtractModel subtractModel;
 
     @Override
@@ -32,15 +33,11 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
-
-        //Access library methods
-        additionModel = new AdditionModel();
-        additionModel.add(10, 10);
-        additionModel.subtract(10, 10);
-
-        subtractModel = new SubtractModel();
-        subtractModel.multiply(10, 10);
-        subtractModel.divide(10, 10);
+        libInterface = new MultipleyModel();
+        libInterface.add(10, 10);
+        libInterface.sub(10, 10);
+        libInterface.multiply(10, 10);
+        libInterface.divide(10, 10);
     }
 
     @Override

@@ -30,4 +30,5 @@ dependencies {
     //internal libraries
     implementation project(path: ':additionlib')
     implementation project(path: ':twolib')
+    compile project(path: ':lib12')
 }

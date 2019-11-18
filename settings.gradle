@@ -1,2 +1,2 @@
-include ':app', ':additionlib', ':twolib'
+include ':app', ':additionlib', ':twolib', ':lib12'
 rootProject.name='SampleProject'
